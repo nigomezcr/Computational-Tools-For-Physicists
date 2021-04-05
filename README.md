@@ -1,1 +1,65 @@
 # Computational-Tools-For-Physicists
+
+## 1 Numerical Errors
+
+Survey of examples of most common numerical errors in scientific computing:
+* Overflow and underflow
+* Precision limit
+* Subtractive cancelation
+* Multiplicative errors
+
+plus some handling of complex numbers.
+
+## 2 Makefiles
+
+Use of makefiles or bash scripts to make automatic compilation, running and compiling.
+
+## 3 Installing Program
+
+Examples of programs installed from source.
+
+## 4 Debugging
+
+### Using debuggers
+Examples of codes to debug with some useful tool. In c++: gdb; in python: pydb.
+Notes: *Debugging* is **identifying** and **correcting** the cause of an error.
+Using a debugger in c++ (gdb):
+* When compiling use -g
+* Launch debugger in terminal: gdb ./file.executable
+* Some comands:
+* * run: starts executable
+* * continue: continues stopped program
+* * finish: continues until the end of a subroutine
+* * step: single steps line by line
+* * next: single steps but doesn't step into subroutines 
+* * print: displays contents of a known data object
+* * display: like print but shows updates every step
+* * where: show stack trace or function calls
+* * up down: allows to move up/down on the stack
+* * break: sets break point indicated by file name+line or function
+* * watch: sets a conditional break point.
+* * delete: removes display or break points.
+* * list: shows the code.
+* * Ctrl+d: quit
+* Launch debugger with user interface: gdb --tui ./file.executable
+* Launch debugger on emacs: ESC-x -> gdb --> ESC-x --> dgb-many
+* * Ctrl+x-o: move between windows
+
+More infor on: https://bitbucket.org/iluvatar/scientific-computing-part-01/wiki/browse/Debugging
+
+### Using flags
+
+**Sanitizers**:
+
+Use them during compilation as g++ -fsanitize=___
+
+* address: verifies that we're not reading memory addresses that we shouldn't read.
+* leak: detects memory leaks
+
+**Valgrinds**:
+
+Use them while running as valgrind ____  ./file.executable
+
+* --tool=memcheck: detects memory errors
+* --leak-check=full
+* --track-origins=yes
