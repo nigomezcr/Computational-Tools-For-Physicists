@@ -1,5 +1,7 @@
 # Computational-Tools-For-Physicists
 
+Taken from prof. Oquendo's lectures on Computational Tools for Physicists in Universidad Nacional de Colombia: https://iluvatar.bitbucket.io/HerrComp/#orgcbd4a91
+
 ## 1 Numerical Errors
 
 Survey of examples of most common numerical errors in scientific computing:
@@ -27,20 +29,20 @@ Using a debugger in c++ (gdb):
 * When compiling use -g
 * Launch debugger in terminal: gdb ./file.executable
 * Some comands:
-* * run: starts executable
-* * continue: continues stopped program
-* * finish: continues until the end of a subroutine
-* * step: single steps line by line
-* * next: single steps but doesn't step into subroutines 
-* * print: displays contents of a known data object
-* * display: like print but shows updates every step
-* * where: show stack trace or function calls
-* * up down: allows to move up/down on the stack
-* * break: sets break point indicated by file name+line or function
-* * watch: sets a conditional break point.
-* * delete: removes display or break points.
-* * list: shows the code.
-* * Ctrl+d: quit
+  * run: starts executable
+  * continue: continues stopped program
+  * finish: continues until the end of a subroutine
+  * step: single steps line by line
+  * next: single steps but doesn't step into subroutines
+  * print: displays contents of a known data object
+  * display: like print but shows updates every step
+  * where: show stack trace or function calls
+  * up down: allows to move up/down on the stack
+  * break: sets break point indicated by file name+line or function
+  * watch: sets a conditional break point.
+  * delete: removes display or break points.
+  * list: shows the code.
+  * Ctrl+d: quit
 * Launch debugger with user interface: gdb --tui ./file.executable
 * Launch debugger on emacs: ESC-x -> gdb --> ESC-x --> dgb-many
 * * Ctrl+x-o: move between windows
@@ -63,3 +65,7 @@ Use them while running as valgrind ____  ./file.executable
 * --tool=memcheck: detects memory errors
 * --leak-check=full
 * --track-origins=yes
+
+## 5 Unit Testing
+
+Allows to ensure that a given software behaves in the correct way, at least for the cases one is testing.
