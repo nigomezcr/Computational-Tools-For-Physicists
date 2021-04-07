@@ -14,11 +14,29 @@ plus some handling of complex numbers.
 
 ## 2 Makefiles
 
-Use of makefiles or bash scripts to make automatic compilation, running and compiling.
+Use of makefiles or bash scripts to make automatic compilation, running and compiling. Use as
+
+> make
+
+or
+
+> make *instruction*
+
+For use in a different folder:
+
+> make -f $HOME/path/to/Makefile
+
 
 ## 3 Installing Program
 
 Examples of programs installed from source.
+
+### Compiling of installed libraries
+In c++, compiling with g++, use:
+
+> g++ -I $HOME/local/include -L $HOME/local/bin/filename.cpp -llibname
+
+if the header are in $HOME/local/include and the libraries are in $HOME/local/bin
 
 ## 4 Debugging
 
@@ -53,14 +71,18 @@ More infor on: https://bitbucket.org/iluvatar/scientific-computing-part-01/wiki/
 
 **Sanitizers**:
 
-Use them during compilation as g++ -fsanitize=___
+Use them during compilation as 
+
+> g++ -fsanitize=___
 
 * address: verifies that we're not reading memory addresses that we shouldn't read.
 * leak: detects memory leaks
 
 **Valgrinds**:
 
-Use them while running as valgrind ____  ./file.executable
+Use them while running as 
+
+> valgrind ____  ./file.executable
 
 * --tool=memcheck: detects memory errors
 * --leak-check=full
