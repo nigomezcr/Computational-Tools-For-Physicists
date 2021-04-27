@@ -38,6 +38,26 @@ In c++, compiling with g++, use:
 
 if the header are in $HOME/local/include and the libraries are in $HOME/local/bin
 
+### Using spack
+
+To see available programs use
+
+> spack list
+
+install a program with
+
+> spack install *prog*
+
+Use also 
+
+> spack info *prog*
+
+to know about different versions and general information of the program.
+Load program with
+
+> spack load *prog*
+
+
 ## 4 Debugging
 
 ### Using debuggers
